@@ -26,11 +26,11 @@ class DefenseAmplifier:
         """
         from attacker.aml_attacker import AMLTechnique
 
-        attack_results = self.attacker.attack([(text, 0)], AMLTechnique.TEXTFOOLER, self.guardrail, 10, True)
+        successful_attacks_count: int = self.attacker.attack([(text, 0)], AMLTechnique.TEXTFOOLER, self.guardrail, 10, True)
 
         # If we succeeded to change the guardrail classification via minor changes to the input that don't change
         # semantic meaning, mark the input as invalid and return False.
-        if len(attack_results) > 0:
+        if successful_attacks_count > 0:
             return False
         return True
 

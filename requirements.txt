@@ -4,5 +4,4 @@ requests
 datasets
 textattack
 numpy
-tensorflow
 certifi

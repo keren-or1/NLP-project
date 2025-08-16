@@ -1,7 +1,6 @@
 import sys
 from enum import Enum
 from typing import List, Tuple
-# import nltk
 
 import textattack
 from textattack import AttackArgs, Attacker, Attack
@@ -231,6 +230,7 @@ class GreedyWordSwapWIRFastStop(GreedyWordSwapWIR):
 
 
 if __name__ == "__main__":
+    # import nltk
     # for pkg in ["stopwords", "punkt", "wordnet", "omw-1.4", "averaged_perceptron_tagger", "averaged_perceptron_tagger_eng", "universal_tagset"]:
     #     try:
     #         nltk.download(pkg, quiet=True)

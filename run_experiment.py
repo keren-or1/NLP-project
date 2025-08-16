@@ -36,11 +36,11 @@ def run_experiment():
     print(f"Processed {len(data_for_attacker)} samples for attacker")
 
     # Adjust here the AMLTechnique for testing different techniques
-    attack_results = aml_attacker.attack(data_for_attacker, AMLTechnique.PWWS, llm_guard_adapter)
-    print(f"Attack succeeded on {len(attack_results)} from {len(data_for_attacker)}")
+    successful_attacks_count = aml_attacker.attack(data_for_attacker, AMLTechnique.PWWS, llm_guard_adapter)
+    print(f"Attack succeeded on {successful_attacks_count} from {len(data_for_attacker)}")
 
     # Calculate ASR - attack success rate
-    print(f"ASR: {(len(attack_results) + misclassified_data_count) / len(data)}")
+    print(f"ASR: {(successful_attacks_count + misclassified_data_count) / len(data)}")
 
     end_time = datetime.now()
     minutes = (end_time - start_time).total_seconds() / 60
