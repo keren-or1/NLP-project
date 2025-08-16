@@ -14,19 +14,21 @@ This project focuses on:
 
 ```
 nlp-project/
-├── attackers/                 # Attack implementation modules
-│   └── aml_attacker.py        # Main attacker class with various AML techniques
-├── guard_adapters/            # Guard system adapters
-│   ├── llm_guard_adapter.py   # LLM Guard integration
-│   └── guardrail_adapter.py   # Base guardrail interface
-├── defense_amplifier/         # Defense enhancement modules
-│   └── defense_amplifier.py   # Defense amplification logic
-├── utils/                     # Utility functions
-│   ├── dataset_utils.py       # Dataset processing utilities
-│   └── visualization_utils.py # Result visualization tools
-├── consts.py                  # Jailbreak patterns and constants
-├── run_experiment.py          # Main experiment runner
-└── requirements.txt           # Project dependencies
+├── attacker/                      # Attack implementation modules
+│   ├── aml_attacker.py            # Main attacker class with various AML techniques
+│   └── guardrail_model_wrapper.py # Model wrapper for guardrail integration
+├── guard_adapters/                # Guard system adapters
+│   ├── llm_guard_adapter.py       # LLM Guard integration
+│   └── guardrail_adapter.py       # Base guardrail interface
+├── defense_amplifier/             # Defense enhancement modules
+│   └── defense_amplifier.py       # Defense amplification logic
+├── utils/                         # Utility functions
+│   ├── dataset_utils.py           # Dataset processing utilities
+│   ├── visualization_utils.py     # Result visualization tools
+│   └── data/                      # Dataset storage directory
+├── consts.py                      # Jailbreak patterns and constants
+├── run_experiment.py              # Main experiment runner
+└── requirements.txt               # Project dependencies
 ```
 
 ## 🚀 Getting Started
